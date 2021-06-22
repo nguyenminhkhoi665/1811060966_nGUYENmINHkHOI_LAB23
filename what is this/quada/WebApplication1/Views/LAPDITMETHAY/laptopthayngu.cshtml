@@ -1,0 +1,48 @@
+﻿@model IEnumerable<WebApplication1.LAPTOPVJP>
+    @{ 
+        ViewBag.TitlePageName = "laptoop view";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+   
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <h2> @ViewBag.TitlePageName</h2>
+    <div class=" row">
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ">
+                <div class=" panel panel-default">
+                    <div class="panel panel-heading">@item.Title</div>
+                    <div class="panel-body">
+                        <p>
+                            <strong>Author: </strong> @item.Author
+                        </p>
+                        <p>
+                            <strong> Public Year :</strong>
+                        <p>
+                            <strong> Price L</strong>
+                        </p>
+                        <p>
+                            <img src="/@item.Cover" alt="hinh thumnail qua xin xo" />
+                        </p>
+                    </div>
+                    <div class="panel-footer clearfix">
+                        <div class="pull-right">
+                            <a href="# " class="btn btn-primary"> Order </a>
+                            <a href="# " class="btn btn-default"> Read more...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+</body>
+</html>
